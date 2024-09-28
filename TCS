@@ -1,0 +1,33 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int count =0;
+    int n;
+    
+    cout<<"insert thr no :"<<endl;
+    cin>>n;
+    
+    int number = n;
+    while(n>0){
+        int digit = n%10;
+       
+        if((digit != 0 && number%digit)==0){
+            count++;
+        }
+         n=n/10;
+    }
+     cout << "Number of digits that divide the number evenly: " << count << endl;
+
+
+    return 0;
+}
