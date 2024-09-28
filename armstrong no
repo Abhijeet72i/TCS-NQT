@@ -1,0 +1,17 @@
+class Solution {
+  public:
+    string armstrongNumber(int n) {
+        int original = n;
+        long long ans =0;
+        while(n>0){
+            int digit = n%10;
+           long long power = pow(digit,3);
+            ans =ans+power;
+            n=n/10;
+        }
+     if(original==ans){
+         return "true";
+     }
+     return "false";
+    }
+};
